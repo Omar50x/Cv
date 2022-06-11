@@ -1,0 +1,59 @@
+:root{
+    --color1: #3A5B87;
+    --color2: #D8D8D8;
+}
+.divl{
+    background-color: var(--color2);
+}
+.background-imag{
+    background-color: var(--color1);
+    border-radius: 0 0 150px 150px;
+    margin: 0 -11px 0 -11px;
+}
+.mon-imag{
+    border-radius: 50%;
+    border: solid 13px #ccc8c8;
+}
+.nome-imag{
+    position: relative;
+    top: 70px;
+}
+.information-p{
+    margin-top: 140px;
+}
+h3{
+    color: var(--color1);
+}
+.logo-p{
+    color: var(--color1);
+}
+.fa-linkedin{
+    color: #0073B1;
+}
+.fa-facebook{
+    color: #1873EB;
+}
+.fa-instagram-square{
+    color: #F3864D;
+}
+.fa-youtube{
+    color: #F70000;
+}
+.circle-bleu{
+    color: var(--color1);
+}
+.circle-gry{
+    color: #afafb6;
+}
+.fa-square{
+    color: var(--color1);
+}
+.ans{
+    color: #999898;
+}
+h2{
+    color: var(--color1);
+}
+p{
+    font-size: 1.5em;
+}
