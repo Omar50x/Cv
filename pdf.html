@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Omar Zekri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* --- Root Variables for a Refined Color Palette --- */
+        :root {
+            --primary-color: #2c3e50;   /* A deep, professional blue-gray */
+            --secondary-color: #34495e; /* Slightly darker shade for contrast */
+            --accent-color: #3498db;    /* A vibrant, professional blue for highlights */
+            --background-color: #f4f7f9; /* A light, clean off-white background */
+            --text-color: #4a4a4a;      /* A soft black for readability */
+            --light-text-color: #7f8c8d;/* A lighter gray for subheadings and details */
+            --card-bg-color: #ffffff;   /* White for card backgrounds */
+        }
+
+        /* --- General Body and Container Styles --- */
+        body {
+            background-color: var(--background-color);
+            font-family: cursive;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .cv-page {
+            max-width: 1000px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            background-color: var(--secondary-color);
+            color: #ecf0f1; /* Light gray for legibility on dark background */
+        }
+
+        .right-column {
+            background-color: var(--card-bg-color);
+        }
+
+        /* --- Profile and Header Styles --- */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            /* font-family: 'Playfair Display', serif; */
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #bdc3c7;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .left-column .section-title {
+            color: #ecf0f1; /* White for readability on the dark background */
+            border-bottom-color: #ecf0f1;
+        }
+        
+        .section-icon {
+            color: var(--accent-color);
+        }
+
+        .left-column .section-icon {
+            color: #ecf0f1;
+        }
+
+        /* --- List and Progress Bar Styles --- */
+        .list-unstyled li {
+            color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .list-unstyled li span, .list-unstyled li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .list-unstyled li a:hover {
+            color: var(--accent-color);
+        }
+
+        .list-unstyled .fa-solid, .list-unstyled .fa-brands {
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            width: 25px; /* Fixed width for alignment */
+        }
+        
+        .progress {
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .progress-bar {
+            background-color: var(--accent-color);
+        }
+
+        .qualities-list li {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .qualities-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .left-column .qualities-list li {
+            color: #ecf0f1;
+        }
+        
+        .left-column .qualities-list li::before {
+            color: #fff;
+        }
+
+
+        /* --- Skills Badges --- */
+        .competence-group .badge {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            padding: 0.6em 1.2em;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .competence-group .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .badge-primary {
+            background-color: var(--accent-color) !important;
+            color: white !important;
+        }
+
+        .badge-secondary {
+            background-color: var(--primary-color) !important;
+            color: white !important;
+        }
+        
+        .badge-info {
+            background-color: #7f8c8d !important; /* A neutral tone */
+            color: white !important;
+        }
+        
+        .badge-success {
+            background-color: #27ae60 !important; /* A professional green */
+            color: white !important;
+        }
+        
+        .competence-category {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        /* --- Timeline Styles for Experience and Education --- */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 8px;
+            height: 100%;
+            width: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background-color: var(--background-color);
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-content {
+            margin-left: 15px;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-content .text-muted {
+            font-size: 0.9rem;
+            color: var(--light-text-color) !important;
+        }
+        
+        .timeline-content p, .timeline-content ul {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        /* --- Print-Specific Styles (Refined) --- */
+        @media print {
+            body {
+                background: none;
+                color: #000;
+                font-size: 11pt;
+            }
+            .cv-page {
+                box-shadow: none;
+                margin: 0;
+                border-radius: 0;
+            }
+            .left-column {
+                background-color: #f0f0f0 !important;
+                color: #000 !important;
+            }
+            .right-column {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            h1, .subtitle {
+                color: #000 !important;
+            }
+            .section-title {
+                color: #000 !important;
+                border-bottom: 1px solid #ccc !important;
+            }
+            .profile-img {
+                border: 2px solid black !important;
+            }
+            .list-unstyled li, .left-column .qualities-list li, .list-unstyled a {
+                color: #000 !important;
+                text-decoration: none !important;
+            }
+            .list-unstyled .fa-solid, .list-unstyled .fa-brands {
+                color: #000 !important;
+            }
+            .progress-bar, .timeline::before, .timeline-dot {
+                background-color: #000 !important;
+                border-color: #000 !important;
+            }
+            .progress {
+                background-color: #ccc !important;
+            }
+            .badge {
+                background-color: #ccc !important;
+                color: #000 !important;
+                border: 1px solid #000;
+            }
+            .timeline-dot {
+                background-color: white !important;
+            }
+            a:after {
+                content: " (" attr(href) ")";
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5 cv-page">
+        <div class="row g-0">
+            <div class="col-md-4 p-5 left-column">
+                <div class="text-center mb-4">
+                    <img class="img-fluid profile-img" src="img/preview.jpg" alt="Photo de profil d'Omar Zekri">
+                    <h1 class="mt-4 mb-0">Omar Zekri</h1>
+                    <p class="subtitle text-uppercase">Développeur Web Full-Stack</p>
+                </div>
+                
+                <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+
+                <section class="mb-4">
+                    <h2 class="section-title"><i class="fa-solid fa-address-card section-icon me-2"></i>Informations Personnelles</h2>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-calendar-days me-3"></i><span>30 Mars 1995</span></li>
+                        <li><i class="fa-solid fa-phone me-3"></i><span>0643076263</span></li>
+                        <li><i class="fa-solid fa-envelope me-3"></i><a href="mailto:omarzekri217@gmail.com">omarzekri217@gmail.com</a></li>
+                        <li><i class="fa-solid fa-location-dot me-3"></i><span>n˚7 rue Jamaa Chleuhs AM Casablanca</span></li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="section-title"><i class="fa-solid fa-network-wired section-icon me-2"></i>Réseaux Sociaux</h2>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-brands fa-github me-3"></i><a href="https://github.com/Omar50x" target="_blank">github.com/Omar50x</a></li>
+                        <li><i class="fa-brands fa-linkedin-in me-3"></i><a href="https://www.linkedin.com/in/omar-zekri-0483b8235/" target="_blank">linkedin.com/in/omar-zekri-0483b8235</a></li>
+                        <li><i class="fa-solid fa-globe me-3"></i><a href="https://omar-zekri.surge.sh/" target="_blank">omar-zekri.surge.sh</a></li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="section-title"><i class="fa-solid fa-language section-icon me-2"></i>Langues</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <h4 class="mb-1">Arabe</h4>
+                            <div class="progress" role="progressbar" aria-label="Arabe proficiency" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 100%"></div></div>
+                        </li>
+                        <li class="mb-2">
+                            <h4 class="mb-1">Amazighia</h4>
+                            <div class="progress" role="progressbar" aria-label="Amazighia proficiency" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 100%"></div></div>
+                        </li>
+                        <li class="mb-2">
+                            <h4 class="mb-1">Français</h4>
+                            <div class="progress" role="progressbar" aria-label="Français proficiency" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 60%"></div></div>
+                        </li>
+                        <li class="mb-2">
+                            <h4 class="mb-1">Anglais</h4>
+                            <div class="progress" role="progressbar" aria-label="Anglais proficiency" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 40%"></div></div>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section class="mb-4">
+                    <h2 class="section-title"><i class="fa-solid fa-star section-icon me-2"></i>Qualités</h2>
+                    <ul class="list-unstyled qualities-list">
+                        <li>Compétences en communication</li>
+                        <li>Capacités de résolution de problèmes</li>
+                        <li>Gestion du temps</li>
+                        <li>Souci du détail</li>
+                        <li>Adaptabilité</li>
+                        <li>Travail d'équipe et collaboration</li>
+                        <li>Créativité</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2 class="section-title"><i class="fa-solid fa-heart section-icon me-2"></i>Loisirs</h2>
+                    <ul class="list-unstyled qualities-list">
+                        <li>Lecture, Écriture, Recherche</li>
+                        <li>Peinture, Poésie, Cinéma</li>
+                        <li>Sport, Méditation</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-md-8 p-5 right-column">
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fa-solid fa-user-circle section-icon me-2"></i>Profil</h2>
+                    <p class="fs-6">Développeur Web Full-Stack passionné et expérimenté, j'ai réalisé plusieurs projets web, du concept à la mise en production. Je suis animé par le désir de me perfectionner et de m'immerger toujours plus profondément dans l'univers du développement web et de la programmation.</p>
+                </section>
+                
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fa-solid fa-code section-icon me-2"></i>Compétences Techniques</h2>
+                    <div class="competence-group mt-4">
+                        <h4 class="competence-category">Front-end</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill badge-primary">HTML</span>
+                            <span class="badge rounded-pill badge-primary">CSS</span>
+                            <span class="badge rounded-pill badge-primary">Bootstrap</span>
+                            <span class="badge rounded-pill badge-primary">Tailwind CSS</span>
+                            <span class="badge rounded-pill badge-primary">JavaScript</span>
+                            <span class="badge rounded-pill badge-primary">TypeScript</span>
+                            <span class="badge rounded-pill badge-primary">React.js</span>
+                            <span class="badge rounded-pill badge-primary">Next.js</span>
+                            <!-- <span class="badge rounded-pill badge-primary">Redux</span> -->
+                            <span class="badge rounded-pill badge-primary">Vuejs</span>
+                            <span class="badge rounded-pill badge-primary">Nuxtjs</span>
+                            <span class="badge rounded-pill badge-primary">Angular</span>
+                        </div>
+                    </div>
+                    <div class="competence-group mt-3">
+                        <h4 class="competence-category">Back-end</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill badge-secondary">PHP</span>
+                            <span class="badge rounded-pill badge-secondary">Laravel</span>
+                            <span class="badge rounded-pill badge-secondary">Node.js</span>
+                            <span class="badge rounded-pill badge-secondary">Express.js</span>
+                        </div>
+                    </div>
+                    <div class="competence-group mt-3">
+                        <h4 class="competence-category">Bases de Données</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill badge-info">MySQL</span>
+                            <span class="badge rounded-pill badge-info">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="competence-group mt-3">
+                        <h4 class="competence-category">Autres</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill badge-success">WordPress</span>
+                            <span class="badge rounded-pill badge-success">Git</span>
+                            <span class="badge rounded-pill badge-success">C</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fa-solid fa-briefcase section-icon me-2"></i>Expérience Professionnelle</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur Web Full-Stack</h4>
+                                <p class="text-muted">Alex | juil. 2023 - aujourd’hui</p>
+                                <ul class="mb-0">
+                                    <li>Passage de freelance à un poste à temps plein en 2024.</li>
+                                    <li>Développement de l'application web IELTS.</li>
+                                    <li>Mise en place de corrections alimentées par l'IA et de systèmes de suivi des progrès.</li>
+                                    <li>Intégration d'API et de services tiers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur WordPress (Stage)</h4>
+                                <p class="text-muted">British Chamber of Commerce for Morocco | déc. 2023 - mai 2024</p>
+                                <ul class="mb-0">
+                                    <li>Conception et personnalisation de sites WordPress pour les besoins de l'organisation.</li>
+                                    <li>Optimisation des performances et de la sécurité.</li>
+                                    <li>Collaboration avec l'équipe de communication pour la mise à jour des contenus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur Web WordPress (Stage)</h4>
+                                <p class="text-muted">WeCoopt | mai. 2023 - juil. 2023</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur Web Full-Stack (Stage)</h4>
+                                <p class="text-muted">PrecisionSystems | févr. 2023 - mars. 2023</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Développeur Web Full-Stack (Stage)</h4>
+                                <p class="text-muted">YAN SOFT | nov. 2022 - févr. 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fa-solid fa-folder-open section-icon me-2"></i>Projets</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Application web de préparation à l’IELTS</h4>
+                                <p>Application full-stack (Laravel, Next.js) avec modules d'entraînement, corrections IA (OpenAI, Speechace), authentification sociale, notifications et suivi des progrès.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Plateforme d’analyse e-commerce multi-locataire</h4>
+                                <p>Plateforme full-stack (Laravel, Next.js) pour l’analyse des commandes e-commerce. Intégration à Google Sheets, détection de fraude et rapports automatisés.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Plateforme de tarification des métaux précieux</h4>
+                                <p>Solution e-commerce (React.js/Next.js, Laravel) intégrant Salla et Zid. Mises à jour automatiques des prix, gestion des abonnements et contrôle d’accès par rôle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title"><i class="fa-solid fa-graduation-cap section-icon me-2"></i>Formations & Éducation</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Formation Développeur Web Full-Stack</h4>
+                                <p class="text-muted">3W Academy | mars. 2022 - sept. 2022</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Licence "Physique Nucléaire"</h4>
+                                <p class="text-muted">Université Hassan II Ain Choke | sept. 2015 - janv. 2020</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Baccalauréat "Science Physique-Chimie"</h4>
+                                <p class="text-muted">Lycée Molay Idriss | sept. 2013 - janv. 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
